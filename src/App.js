@@ -3,6 +3,8 @@ import Home from './component/Home';
 import { createBrowserRouter,RouterProvider} from "react-router-dom";
 import { useState } from 'react';
 import LoadingBar from 'react-top-loading-bar'
+import LoginPage from './component/Login';
+import SignupPage from './component/Signup';
 
 function App() {
 
@@ -37,6 +39,18 @@ function App() {
       color='#DED9DF'
       progress={progress}
       /><Home showalert={showalert} handleonClick2={handleonClick2}/></>
+    },{
+      path:"/login",
+      element:<><LoadingBar
+      color='#DED9DF'
+      progress={progress}
+      /><LoginPage/></>
+    },{
+      path:"/signup",
+      element:<><LoadingBar
+      color='#DED9DF'
+      progress={progress}
+      /><SignupPage/></>
     }
   ])
  
